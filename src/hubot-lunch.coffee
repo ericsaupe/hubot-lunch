@@ -124,7 +124,8 @@ module.exports = (robot) ->
   # Cancel the entire order and remove all the items
   robot.respond /cancel all orders/i, (msg) ->
     delete robot.brain.data.lunch
-    lunch.clear()  
+    lunch.clear()
+    msg.send "ok, I cleared all the orders."
 
   ##
   # Help decided who should either order, pick up or get
